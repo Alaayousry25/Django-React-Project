@@ -3,7 +3,7 @@ import api from "../api";
 import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import "../styles/form.css"
-import LoadingIndicator from "./LoadingIndicator";
+import LoadingIndicator from "./Loadingindicator";
 
 
 function Form({ route, method }) {
