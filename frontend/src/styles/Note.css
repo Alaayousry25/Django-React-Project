@@ -1,3 +1,8 @@
+body {
+  display: flex;
+  align-items: center;     /* vertical center */
+  height: 100vh;           /* full screen height */
+}
 .note-container {
   padding: 10px;
   margin: 20px 0;
