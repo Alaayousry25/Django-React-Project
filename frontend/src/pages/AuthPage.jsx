@@ -9,6 +9,7 @@ export default function AuthPage() {
     <div
       style={{
         minHeight: "100vh",
+        width: "100vw",
         background: "linear-gradient(135deg, #1976d2 0%, #ff4081 100%)",
         display: "flex",
         alignItems: "center",
@@ -17,13 +18,14 @@ export default function AuthPage() {
     >
       <div
         style={{
-          maxWidth: 420,
-          width: "100%",
+          width: "360px",
+          maxWidth: "90vw",
           background: "#fff",
           borderRadius: 16,
           boxShadow: "0 8px 32px rgba(25, 118, 210, 0.15)",
           padding: "32px 28px 28px 28px",
           textAlign: "center",
+          margin: "0 auto"
         }}
       >
         <h2

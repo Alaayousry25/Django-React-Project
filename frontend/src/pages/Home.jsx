@@ -3,7 +3,7 @@ import api from "../api";
 import Note from "../components/Note";
 import UserDropdown from "../components/UserDropdown";
 import "../styles/Home.css";
-import bgImage from "../assets/download.jpeg";
+import bgImage from "../assets/down.jpeg";
 
 function Home() {
   const [notes, setNotes] = useState([]);
@@ -68,43 +68,24 @@ function Home() {
       >
         <UserDropdown />
       </div>
-      <div style={{ maxWidth: 700, margin: "32px auto 0 auto" }}>
+      <div
+        style={{
+          position: "relative",
+          width: "100vw",
+          height: "calc(100vh - 80px)",
+        }}
+      >
         <div
           style={{
-            background: "#fff",
-            borderRadius: 16,
-            boxShadow: "0 8px 32px rgba(25, 118, 210, 0.15)",
-            padding: "32px 28px 28px 28px",
-            marginBottom: 32,
-          }}
-        >
-          <h2
-            style={{
-              color: "#1976d2",
-              fontWeight: 700,
-              fontSize: "2rem",
-              marginBottom: 24,
-              letterSpacing: "1px",
-            }}
-          >
-            Notes
-          </h2>
-          {notes.length === 0 ? (
-            <div style={{ color: "#888", fontStyle: "italic" }}>
-              No notes yet.
-            </div>
-          ) : (
-            notes.map((note) => (
-              <Note note={note} onDelete={deleteNote} key={note.id} />
-            ))
-          )}
-        </div>
-        <div
-          style={{
+            position: "absolute",
+            top: "50%",
+            left: "10vw",
+            width: "35vw",
             background: "#fff",
             borderRadius: 16,
             boxShadow: "0 8px 32px rgba(255, 64, 129, 0.10)",
             padding: "32px 28px 28px 28px",
+            transform: "translateY(-50%)",
           }}
         >
           <h2
@@ -165,6 +146,40 @@ function Home() {
               }}
             />
           </form>
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            top: "32px",
+            left: "50vw",
+            width: "40vw",
+            background: "#fff",
+            borderRadius: 16,
+            boxShadow: "0 8px 32px rgba(25, 118, 210, 0.15)",
+            padding: "32px 28px 28px 28px",
+            minHeight: "300px",
+          }}
+        >
+          <h2
+            style={{
+              color: "#1976d2",
+              fontWeight: 700,
+              fontSize: "2rem",
+              marginBottom: 24,
+              letterSpacing: "1px",
+            }}
+          >
+            Notes
+          </h2>
+          {notes.length === 0 ? (
+            <div style={{ color: "#888", fontStyle: "italic" }}>
+              No notes yet.
+            </div>
+          ) : (
+            notes.map((note) => (
+              <Note note={note} onDelete={deleteNote} key={note.id} />
+            ))
+          )}
         </div>
       </div>
     </div>
