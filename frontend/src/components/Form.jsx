@@ -5,7 +5,6 @@ import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import "../styles/form.css";
 import LoadingIndicator from "./LoadingIndicator";
 
-
 function Form({ route, method, onRegisterSuccess }) {
   const [username, setUsername] = useState("");
   const [password, setpassword] = useState("");
